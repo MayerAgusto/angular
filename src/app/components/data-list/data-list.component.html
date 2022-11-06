@@ -1,0 +1,20 @@
+<div class="col-md-4" *ngFor="let data of datas">
+    <div class="card text-center">
+        <div class="card-header bg-black text-white d-flex justify-content-between align-items-center">
+            {{data.name}}
+            <button class="btn btn-danger" (click)="deleteData(data._id)">
+                <i class="far fa-trash-alt"> Delete</i>
+            </button>
+        </div>
+        <div class="card-body">
+            <p>
+                {{data.age}}
+            </p>
+            <p>
+                {{data.colour}}
+            </p>
+            <a  [routerLink]="['/data/edit', data._id]" class="btn btn-info btn-black">Edit Data</a>
+        </div>
+    </div>
+
+</div>
